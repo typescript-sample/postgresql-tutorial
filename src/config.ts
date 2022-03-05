@@ -1,5 +1,6 @@
 export const config = {
   port: 8082,
+  template: true,
   allow: {
     origin: '*',
     credentials: 'true',
@@ -7,11 +8,12 @@ export const config = {
     headers: '*'
   },
   log: {
-    level: 'info',
+    level: 'debug',
     map: {
       time: '@timestamp',
       msg: 'message'
-    }
+    },
+    db: true
   },
   middleware: {
     log: true,
