@@ -1,6 +1,6 @@
 import { Attributes, DateRange, Filter, Repository, Service } from "onecore";
 
-export interface Tourament {
+export interface Tournament {
   id: string;
   name: string;
   description: string;
@@ -11,12 +11,12 @@ export interface Tourament {
   leagueId: string;
 }
 
-export interface TouramentRepository extends Repository<Tourament, string> {}
+export interface TournamentRepository extends Repository<Tournament, string> {}
 
-export interface TouramentService
-  extends Service<Tourament, string, TouramentFilter> {}
+export interface TournamentService
+  extends Service<Tournament, string, TournamentFilter> {}
 
-export const touramentModel: Attributes = {
+export const tournamentModel: Attributes = {
   id: {
     key: true,
     match: "equal",
@@ -32,7 +32,7 @@ export const touramentModel: Attributes = {
   leagueId: {},
 };
 
-export interface TouramentFilter extends Filter {
+export interface TournamentFilter extends Filter {
   id: string;
   name: string;
   description: string;

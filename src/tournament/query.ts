@@ -1,7 +1,7 @@
 import { Statement } from "query-core";
-import { TouramentFilter } from "./tourament";
-export function buildQuery(s: TouramentFilter): Statement {
-  let query = `select * from touraments`;
+import { TournamentFilter } from "./tournament";
+export function buildQuery(s: TournamentFilter): Statement {
+  let query = `select * from tournaments`;
   const where = [];
   const params = [];
   let i = 1;
